@@ -1,2 +1,2 @@
 # Mobile
-leaning Mobile
+learning Mobile
