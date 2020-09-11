@@ -47,4 +47,16 @@ dz> module repository create /path/to/repository
 #Connect Android studio to proxy
 emulator -avd #phone_name# -http-proxy http://127.0.0.1:8080
 
+#https://bytepen.gitlab.io/edu/resources/reverse-engineering/android.html
+#Setup frida
+pip install frida-tools
+# download frida-server from frida github 
+$ adb root # might be required
+$ adb push frida-server /data/local/tmp/
+$ adb shell "chmod 755 /data/local/tmp/frida-server"
+$ adb shell "/data/local/tmp/frida-server &"
+# test if frida-server running correctly
+frida-ps -U
+
+frida-trace -U -i open  full_app_name
 
