@@ -37,4 +37,13 @@ adb forward tcp:31415 tcp:31415
 # On your computer you can now perform: 
 drozer console connect
 
+# a few drozer commands
+dz> run app.package.list -f "appname"
+dz> run app.package.info -a /result/of/above/command
+
+# Add repository in drozer
+dz> module repository create /path/to/repository
+
+
+
 
