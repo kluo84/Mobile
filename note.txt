@@ -44,6 +44,7 @@ dz> run app.package.info -a /result/of/above/command
 # Add repository in drozer
 dz> module repository create /path/to/repository
 
-
+#Connect Android studio to proxy
+emulator -avd #phone_name# -http-proxy http://127.0.0.1:8080
 
 
