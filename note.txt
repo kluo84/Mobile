@@ -40,6 +40,7 @@ drozer console connect
 # a few drozer commands
 dz> run app.package.list -f "appname"
 dz> run app.package.info -a /result/of/above/command
+dz> run scanner.provider.injection -a #app
 
 # Add repository in drozer
 dz> module repository create /path/to/repository
