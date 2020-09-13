@@ -41,6 +41,12 @@ drozer console connect
 dz> run app.package.list -f "appname"
 dz> run app.package.info -a /result/of/above/command
 dz> run scanner.provider.injection -a #app
+dz> run app.package.manifest #app
+
+# check for attack surface shows only application components that have been exported in their manifest. With -u: show not exported by application.
+dz> run app.package.attacksurface #app
+dz> run app.<component>.info -a #app -i -u
+
 
 # Add repository in drozer
 dz> module repository create /path/to/repository
