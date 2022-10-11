@@ -19,8 +19,11 @@ su command after adb shell or adb shell "su"
 #list applications in Android in shell 
 pm list packages -f 
 
+# find the path:
+pm path (result of pm list packages | grep app)
+
 # to pull apk file from rooted android phone
-adb pull -p /path/to/apk/file/from/command/pm_list_packages/-f
+adb pull -p /path/to/apk/file/from/command/pm path/ save_name.apk
 
 # unzip apk file. Make sure create the directory for the app first or unzip with new directory option
 unzip app.apk -d app
